@@ -1,7 +1,7 @@
 name: Metrics
 on:
   schedule:
-    - cron: '38 */3 * * *'
+    - cron: '38 * * * *'
   push:
     branches:
       - main
@@ -20,7 +20,7 @@ jobs:
 
           base: "header, repositories"
 
-          config_order: base.header, base.repositories, lines, stars, languages
+          config_order: base.header, base.repositories, lines, languages, stars
           config_timezone: America/New_York
           config_padding: 10%
 
